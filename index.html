@@ -6,12 +6,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
     <body>
-        <nav>
-    <span>FragDaily</span>
-    <a href="#">News</a>
+<nav>
+  <span>FragDaily</span>
+  <div>
+    <a href="#news">Read Latest News</a>
     <a href="#">Tournaments</a>
     <a href="#">About</a>
-  </nav>
+    <button id="toggleMode">🌙 Dark</button>
+  </div>
+</nav>
 
   <section class="hero">
   <h1>Stay Ahead of the Game</h1>
@@ -19,7 +22,7 @@
   <a href="#">Read Latest News</a>
 </section>
 
-<section class="news">
+<section class="news" id="news">
   <h2>Latest News</h2>
 
   <div class="cards">
@@ -48,9 +51,36 @@
   </div>
 </section>
 
+<section class="newsletter">
+  <h2>Stay in the Loop</h2>
+  <p>Get the latest esports news delivered to your inbox.</p>
+  <form class="form" action="https://formspree.io/f/mqeoqqpr" method="POST">
+    <input type="email" name="email" placeholder="Enter your email...">
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
 <footer>
   <p>© 2025 FragDaily. All rights reserved.</p>
 </footer>
 
+ <!-- AI Chat Widget -->
+<div id="chatBubble">💬</div>
+
+<div id="chatBox">
+  <div id="chatHeader">
+    <span>FragBot 🤖</span>
+    <button id="closeChat">✕</button>
+  </div>
+  <div id="chatMessages">
+    <div class="bot-message">Hey! I'm FragBot. Ask me anything about Esports! 🎮</div>
+  </div>
+  <div id="chatInput">
+    <input type="text" id="userInput" placeholder="Ask me anything...">
+    <button id="sendBtn">Send</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
     </body>
 </html>
